@@ -1,38 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
 }
 
 header {
-    background: #333;
-    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the header is above other content */
+    background-color: #fff; /* Light gray background */
+    color: #333; /* Dark gray text */
     padding: 1rem;
     text-align: center;
 }
 
 nav button {
     background: none;
-    border: none;
-    color: #fff;
+    border: 2px solid #333; /* Dark gray border */
+    color: #333; /* Dark gray text */
+    padding: 0.5rem 1rem;
     margin: 0 15px;
     font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav button:hover {
-    color: #ccc;
+    background-color: #333; /* Dark gray background on hover */
+    color: #fff; /* White text on hover */
 }
 
 section {
+    max-width: 800px; /* Maximum width of content */
+    margin: 20px auto; /* Centering the section */
     padding: 20px;
-    margin: 20px 0;
+    background-color: #f8f9fa; /* Light gray background for sections */
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #6B96C3; /* Dark gray background */
+    color: #fff; /* White text */
     text-align: center;
     padding: 10px;
+}
+
+
+.main-blog {
+    width: 100%;
+    height: 60vh; /* Adjust the height as needed */
+    /*background-image: url('path_to_your_background_image.jpg');*/
+    background-size: cover; /* This will cover the entire area without stretching the image */
+    background-position: center; /* This centers the background image in the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    align-items: center; /* Aligns content vertically */
+    justify-content: center; /* Aligns content horizontally */
+    text-align: center;
+    color: white;
+    position: relative;
+
+    display: flex;
+    /*align-items: flex-end; /* Aligns content to the bottom */
+    justify-content: flex-start; /* Aligns content to the left */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 20px; /* Add some padding on the left */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+
+/* Blog Content Styling */
+.blog-content {
+    max-width: 800px; /* Adjust as necessary */
+    /* Remove margin and padding styles if previously set */
+}
+
+/* Read Button to Text */
+.move-to-blog {
+    background: none; /* Makes the background transparent */
+    border: none;
+    color: white; /* Assuming you want white text */
+    text-decoration: underline; /* Underlines the text */
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit; /* Inherits the font size from the parent */
+    /* Add any additional styles for font size, family, etc. */
+}
+
+/* Ensure this button has the same hover effect */
+.move-to-blog:hover {
+    text-decoration: none; /* Removes underline on hover, or customize as desired */
 }
